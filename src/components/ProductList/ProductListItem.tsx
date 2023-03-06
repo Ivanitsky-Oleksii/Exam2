@@ -34,8 +34,8 @@ return (
             <h3 >{descriptions}</h3>
             <h3 >{price}</h3>
         </CardContent>
-        <CardActions className="product-btn-wrap">
-        <Button variant='outlined' onClick={() => onIncrement() } disabled={count >=10}>BUY</Button>
+        <CardActions>
+        <Button variant="outlined" onClick={() => totalPrice(id,count)}>BUY</Button>
         </CardActions>
     </Card>
     </>

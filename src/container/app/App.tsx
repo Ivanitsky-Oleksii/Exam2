@@ -15,7 +15,7 @@ type ProductsInCart = {
       }))
     }
       return (
-<Home totalPrice={totalPrice}/>
+<Home totalPrice={totalPrice} productsInCart={productsInCart}/>
 )
 }
 export default App

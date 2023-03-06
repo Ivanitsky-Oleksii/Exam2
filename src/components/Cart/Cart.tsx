@@ -1,12 +1,17 @@
+import productsArray, { getProductsObject, Product } from "utils/productsArray"
+
 type Props = {
-    
+    productsInCart:{
+        [id:number]:number
+    }
+productsObject?:{
+    [id:number] : Product
+}
 }
 
-const Cart = (props: Props) => {
-    return (
-        <>
-        <h3>Total:</h3>
-        </>
-    )
-} 
-export default Cart
+const CartTotal = ({productsInCart,productsObject = getProductsObject(productsArray)}: Props) => {
+    return(
+        <div><h3>Total:</h3> {Object.keys(productsInCart).reduce((total,productId)=>(total + productsObject[parseInt(productId)].price * productsInCart[parseInt(productId)] ),0)}$</div>
+        )
+    }
+    export default CartTotal
