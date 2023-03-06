@@ -1,14 +1,11 @@
+import ProductList from "components/ProductList/ProductList"
 
-
-const Home = () => {
+type Props = {}
+const Home = (props: Props) => {
 return (
-    <>
     <div>
-
-
-
+<ProductList/>
     </div>
-    </>
 )
 }
 export default Home

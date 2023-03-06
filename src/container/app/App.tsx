@@ -1,13 +1,12 @@
 import Home from "pages/Home/Home";
 
-type Props={}
+
+type Props = {}
 
 
 const App = (props:Props) =>{
   return (
-<>
 <Home/>
-</>
 )
 }
 export default App
