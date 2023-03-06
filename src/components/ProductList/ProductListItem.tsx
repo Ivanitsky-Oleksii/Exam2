@@ -1,36 +1,41 @@
-import { Card, CardContent, CardActions,Grid,Button} from "@mui/material"
+import { Card, CardContent, CardActions,Button} from "@mui/material"
+import { useState } from 'react'
 
 type Props = {
+    id:number
     title: string
     descriptions: string
-    priceEUR?: string
-    priceUSD?: string
-    priceUAH?: string
+    price: number
+
+    totalPrice:(count:number,price:number) => void
 }
 
 
 const ProdactListItem = (
     {
+        id,
         title,
         descriptions,
-        priceEUR,
-        priceUSD,
-        priceUAH
-    }: Props
-) => {
+        price,
+        totalPrice
+    }: Props) => 
+        {
+
+    const [count,setCount] = useState<number>(1)
+            
+    const onIncrement = () => {
+                setCount ((prevState) => prevState + 1)
+            }
 return (
     <>
-    <Button variant="outlined">USD</Button>
-    <Button variant="outlined">EUR</Button>
-    <Button variant="outlined">UAH</Button>
-    <Card variant="outlined">
+        <Card variant="outlined">
         <CardContent>
             <h1 >{title}</h1>
             <h3 >{descriptions}</h3>
-            <h3 >{priceEUR}</h3>
+            <h3 >{price}</h3>
         </CardContent>
         <CardActions className="product-btn-wrap">
-            <Button variant="outlined">BUY</Button>
+        <Button variant='outlined' onClick={() => onIncrement() } disabled={count >=10}>BUY</Button>
         </CardActions>
     </Card>
     </>

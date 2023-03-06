@@ -1,31 +1,30 @@
 type ProductProps = {
+    id:number
     title: string
     descriptions: string
-    priceEUR?: string
-    priceUSD?: string
-    priceUAH?: string
+    price: number
 }
 const productsArray: ProductProps[] = [
     {
+        id:1,
         title: 'iPhone 12',
         descriptions: 'This is iPhone 12....',
-        priceEUR: "EUR 750",
-        priceUSD: "USD 740",
-        priceUAH:"UAH 30045",
+        price: 750,
+        
     },
     {
+        id:2,
         title: 'iPhone 8',
         descriptions: 'This is iPhone 8....',
-        priceEUR: "EUR 850",
-        priceUSD: "USD 840",
-        priceUAH:"UAH 34105",
+        price: 850,
+
     },
     {
+        id:3,
         title: 'iPhone X',
         descriptions: 'This is iPhone X....',
-        priceEUR: "EUR 1250",
-        priceUSD: "USD 1240",
-        priceUAH:"UAH 50345",
+        price: 1250,
+
     },
 ]
 export default productsArray
