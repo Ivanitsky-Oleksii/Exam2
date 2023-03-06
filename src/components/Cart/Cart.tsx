@@ -11,7 +11,8 @@ productsObject?:{
 
 const CartTotal = ({productsInCart,productsObject = getProductsObject(productsArray)}: Props) => {
     return(
-        <div><h3>Total:</h3> {Object.keys(productsInCart).reduce((total,productId)=>(total + productsObject[parseInt(productId)].price * productsInCart[parseInt(productId)] ),0)}$</div>
+        <div>
+            Total: {Object.keys(productsInCart).reduce((total,productId)=>(total + productsObject[parseInt(productId)].price1 * productsInCart[parseInt(productId)] ),0)}</div>
         )
     }
     export default CartTotal

@@ -20,7 +20,7 @@ return (
     <Button variant="outlined">UAH</Button>
     </div>
         <Grid container spacing={3}>
-        {productsArray.map(({id,title,descriptions,price,currency}) => (
+        {productsArray.map(({id,title,descriptions,price1,currency}) => (
                 <Grid item xs={12} sm={6} md={4}>
                     <ProductListItem
                         id={id}
@@ -28,7 +28,7 @@ return (
                         title={title}
                         descriptions={descriptions}
                         currency={currency}
-                        price={price}
+                        price1={price1}
                     />
                 </Grid>
             ))}

@@ -5,7 +5,7 @@ type Props = {
     id:number
     title: string
     descriptions: string
-    price: number
+    price1: number
     currency:string
 
     totalPrice:(count:number,price:number) => void
@@ -17,24 +17,22 @@ const ProdactListItem = (
         id,
         title,
         descriptions,
-        price,
+        price1,
         totalPrice,
         currency
     }: Props) => 
         {
 
-    const [count,setCount] = useState<number>(1)
+    const [count] = useState<number>(1)
             
-    const onIncrement = () => {
-                setCount ((prevState) => prevState + 1)
-            }
+
 return (
     <>
         <Card variant="outlined">
         <CardContent>
             <h1 >{title}</h1>
             <h3 >{descriptions}</h3>
-            <h3 >{price}</h3>
+            <h3 >{price1}</h3>
             <h5 >{currency}</h5>
         </CardContent>
         <CardActions>
