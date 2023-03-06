@@ -4,8 +4,8 @@ type Props = {
     title: string
     descriptions: string
     priceEUR?: string
-    priceUSD?: number
-    priceUAH?: number
+    priceUSD?: string
+    priceUAH?: string
 }
 
 
