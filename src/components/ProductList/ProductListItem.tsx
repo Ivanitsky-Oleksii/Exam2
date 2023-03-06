@@ -6,6 +6,7 @@ type Props = {
     title: string
     descriptions: string
     price: number
+    currency:string
 
     totalPrice:(count:number,price:number) => void
 }
@@ -17,7 +18,8 @@ const ProdactListItem = (
         title,
         descriptions,
         price,
-        totalPrice
+        totalPrice,
+        currency
     }: Props) => 
         {
 
@@ -33,6 +35,7 @@ return (
             <h1 >{title}</h1>
             <h3 >{descriptions}</h3>
             <h3 >{price}</h3>
+            <h5 >{currency}</h5>
         </CardContent>
         <CardActions>
         <Button variant="outlined" onClick={() => totalPrice(id,count)}>BUY</Button>

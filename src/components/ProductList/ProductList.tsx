@@ -20,13 +20,14 @@ return (
     <Button variant="outlined">UAH</Button>
     </div>
         <Grid container spacing={3}>
-        {productsArray.map(({id,title,descriptions,price}) => (
+        {productsArray.map(({id,title,descriptions,price,currency}) => (
                 <Grid item xs={12} sm={6} md={4}>
                     <ProductListItem
                         id={id}
                         totalPrice={totalPrice}
                         title={title}
                         descriptions={descriptions}
+                        currency={currency}
                         price={price}
                     />
                 </Grid>
