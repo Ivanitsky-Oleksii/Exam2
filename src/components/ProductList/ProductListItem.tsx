@@ -36,12 +36,18 @@ return (
     margin="10px"
 >
         <Card variant="outlined">
+        <Stack
+    direction="column"
+    justifyContent="center"
+    alignItems="center"
+    margin="10px">
         <CardContent>
             <h1 >{title}</h1>
             <h3 >{descriptions}</h3>
-            <h3 >{price1}</h3>
             <h5 >{currency1}</h5>
+            <h3 >{price1}</h3>
         </CardContent>
+        </Stack>
         <CardActions>
         <Stack paddingLeft="30%" >
         <Button variant="outlined" onClick={() => totalPrice(id,count)}>BUY</Button>
