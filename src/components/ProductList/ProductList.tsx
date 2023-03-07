@@ -1,6 +1,6 @@
 import { Grid, Typography, Button } from '@mui/material'
 import ProductListItem from 'components/ProductList/ProductListItem'
-import productsArray3 from 'utils/productsArray3'
+import productsArray1 from 'utils/productsArray1'
 
 
 
@@ -15,7 +15,7 @@ const ProductList = ({ totalPrice }: Props) => {
                 Our shop page
             </Typography>
             <Grid container spacing={3}>
-                {productsArray3.map(
+                {productsArray1.map(
                     ({ id, title, descriptions, price1, currency1 }) => (
                         <Grid item xs={12} sm={6} md={4}>
                             <ProductListItem

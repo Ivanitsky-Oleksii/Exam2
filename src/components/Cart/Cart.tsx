@@ -1,4 +1,4 @@
-import productsArray3, { getProductsObject, Product } from 'utils/productsArray3'
+import productsArray1, { getProductsObject, Product } from 'utils/productsArray1'
 import { Stack } from '@mui/material'
 type Props = {
     productsInCart: {
@@ -11,7 +11,7 @@ type Props = {
 
 const CartTotal = ({
     productsInCart,
-    productsObject = getProductsObject(productsArray3),
+    productsObject = getProductsObject(productsArray1),
 }: Props) => {
     return (
         <>
