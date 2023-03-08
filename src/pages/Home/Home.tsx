@@ -5,13 +5,15 @@ import ProductList from "components/ProductList/ProductList"
 type Props = {
     totalPrice:(count:number,price:number) => void
     productsInCart:{[id:number]:number}
+    changeCurrency:(id:number)=>void
 }
 
-const Home = ({totalPrice,productsInCart}: Props) => {
+const Home = ({totalPrice,productsInCart,changeCurrency}: Props) => {
 return (
     <>
-<ProductList totalPrice={totalPrice}/>
+<ProductList totalPrice={totalPrice} changeCurrency={changeCurrency}/>
 <Cart productsInCart={productsInCart}/>
+
     </>
 
 )

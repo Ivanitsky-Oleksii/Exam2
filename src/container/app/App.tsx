@@ -7,6 +7,10 @@ type ProductsInCart = {
   [id:number]:number}
 
   const App = (props: Props) => {
+    
+  const changeCurrency = (id:number)=>{{}}
+
+
     const [productsInCart, setProductsInCart] = useState<ProductsInCart>({})
     const totalPrice = (id:number,count:number) => {
       setProductsInCart((prevState) => ({
@@ -15,7 +19,7 @@ type ProductsInCart = {
       }))
     }
       return (
-<Home totalPrice={totalPrice} productsInCart={productsInCart}/>
+<Home totalPrice={totalPrice} productsInCart={productsInCart} changeCurrency={changeCurrency}/>
 )
 }
 export default App

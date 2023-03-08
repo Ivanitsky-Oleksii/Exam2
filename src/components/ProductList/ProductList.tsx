@@ -6,9 +6,10 @@ import productsArray1 from 'utils/productsArray1'
 
 type Props = {
     totalPrice: (count: number, price: number) => void
+    changeCurrency:(id: number) => void
 }
 
-const ProductList = ({ totalPrice }: Props) => {
+const ProductList = ({ totalPrice,changeCurrency }: Props) => {
     return (
         <>
             <Typography variant="h2" align="center" component="h4">
@@ -21,7 +22,7 @@ const ProductList = ({ totalPrice }: Props) => {
     spacing={1}
     margin="10px"
 >
-            <Button variant='outlined'>EUR</Button>
+            {/* <Button variant='outlined' onClick={()=>changeCurrency()}>EUR</Button> */}
             <Button variant='outlined'>USD</Button>
             <Button variant='outlined'>UAH</Button>
             </Stack>
