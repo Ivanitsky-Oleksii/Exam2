@@ -4,10 +4,7 @@ import productsArray1 from 'utils/productsArray1'
 
 
 
-type Props = {
-    totalPrice: (count: number, price: number) => void
-
-}
+type Props = {totalPrice: (count: number, price: number) => void}
 
 const ProductList = ({ totalPrice }: Props) => {
     return (
