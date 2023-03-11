@@ -6,7 +6,11 @@ type Props = {
     title: string
     descriptions: string
     price1: number
+    price2: number
+    price3: number
     currency1:string
+    currency2:string
+    currency3:string
 
     totalPrice:(count:number,price:number) => void
 }
@@ -18,8 +22,12 @@ const ProdactListItem = (
         title,
         descriptions,
         price1,
+        price2,
+        price3,
         totalPrice,
-        currency1
+        currency1,
+        currency2,
+        currency3
     }: Props) => 
         {
 
@@ -44,8 +52,8 @@ return (
         <CardContent>
             <h1 >{title}</h1>
             <h3 >{descriptions}</h3>
-            <h5 >{currency1}</h5>
-            <h3 >{price1}</h3>
+            <h5 >{currency3}</h5>
+            <h3 >{price3}</h3>
         </CardContent>
         </Stack>
         <CardActions>

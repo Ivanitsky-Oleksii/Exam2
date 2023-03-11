@@ -3,7 +3,12 @@ export type Product = {
     title: string
     descriptions: string
     price1: number
+    price2: number
+    price3: number
     currency1:string
+    currency2:string
+    currency3:string
+    
 
 }
 const productsArray: Product[] = [
@@ -12,8 +17,11 @@ const productsArray: Product[] = [
         title: 'iPhone 12',
         descriptions: 'This is iPhone 12....',
         price1: 750,
-        
+        price2: 740,
+        price3: 33000,
         currency1:"EUR",
+        currency2:"USD",
+        currency3:"UAH",
         
         
     },
@@ -22,7 +30,11 @@ const productsArray: Product[] = [
         title: 'iPhone 8',
         descriptions: 'This is iPhone 8....',
         price1: 850,
+        price2: 840,
+        price3: 39000,
         currency1:"EUR",
+        currency2:"USD",
+        currency3:"UAH",
         
 
     },
@@ -31,60 +43,15 @@ const productsArray: Product[] = [
         title: 'iPhone X',
         descriptions: 'This is iPhone X....',
         price1: 1250,
+        price2: 1240,
+        price3: 52000,
         currency1:"EUR",
+        currency2:"USD",
+        currency3:"UAH",
         
 
     },
-    {
-        id:4,
-        title: 'iPhone 12',
-        descriptions: 'This is iPhone 12....',
-        price1: 740,
-        currency1:"USD",
-
-        
-    },
-    {
-        id:5,
-        title: 'iPhone 8',
-        descriptions: 'This is iPhone 8....',
-        price1: 840,
-        currency1:"USD",
-
-    },
-    {
-        id:6,
-        title: 'iPhone X',
-        descriptions: 'This is iPhone X....',
-        price1: 1240,
-        currency1:"USD",
-
-    },
-    {
-        id:7,
-        title: 'iPhone 12',
-        descriptions: 'This is iPhone 12....',
-        price1: 30000, 
-        currency1:"UAH",
-        
-    },
-    {
-        id:8,
-        title: 'iPhone 8',
-        descriptions: 'This is iPhone 8....',
-        price1: 32000, 
-        currency1:"UAH",
-
-    },
-    {
-        id:9,
-        title: 'iPhone X',
-        descriptions: 'This is iPhone X....',
-        price1: 52000, 
-        currency1:"UAH",
-
-    },
-
+    
 ]
 export const getProductsObject = (array:Product[]) =>
 array.reduce((object,product) => ({...object,[product.id]:product,}),{})

@@ -16,8 +16,7 @@ const App = (props: Props) => {
     setProductsInCart((prevState) => ({
         ...prevState,
         [id]: (prevState[id] || 0) + count,
-    }))
-    }
+    }))}
     return (
 <Home totalPrice={totalPrice} productsInCart={productsInCart} />
 )
