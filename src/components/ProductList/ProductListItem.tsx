@@ -1,6 +1,6 @@
 import { Card, CardContent, CardActions,Button,Stack} from "@mui/material"
 import { useState } from 'react'
-import "../ProductList/ProductListItem.scss"
+
 
 type Props = {
     id:number
