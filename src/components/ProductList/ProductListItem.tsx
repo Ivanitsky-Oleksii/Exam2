@@ -1,6 +1,4 @@
 import { Card, CardContent, CardActions,Button,Stack} from "@mui/material"
-import { useState } from 'react'
-
 
 type Props = {
     id:number
@@ -20,16 +18,11 @@ const ProdactListItem = (
         descriptions,
         price,
         totalPrice,
-        exchangeRate,
         currencyType
 
 
     }: Props) => 
         {
-
-    const [count] = useState<number>(1)
-            
-
 return (
     <>
     <Stack

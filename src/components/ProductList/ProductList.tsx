@@ -1,4 +1,4 @@
-import { Grid, Typography, Button, Stack } from '@mui/material'
+import { Grid, Typography, Stack } from '@mui/material'
 import ProductListItem from 'components/ProductList/ProductListItem'
 import productsArray1 from 'utils/productsArray1'
 import CurrencyButton from "../Currency/CurrencyButton"
