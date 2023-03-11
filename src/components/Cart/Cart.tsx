@@ -26,7 +26,7 @@ const CartTotal = ({
             {Object.keys(productsInCart).reduce(
                 (total, productId) =>
                     total +
-                    productsObject[parseInt(productId)].price3 *
+                    productsObject[parseInt(productId)].price *
                         productsInCart[parseInt(productId)],
                 0
             )}

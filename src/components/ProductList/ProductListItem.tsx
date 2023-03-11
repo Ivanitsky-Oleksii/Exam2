@@ -1,16 +1,15 @@
 import { Card, CardContent, CardActions,Button,Stack} from "@mui/material"
 import { useState } from 'react'
+import "../ProductList/ProductListItem.scss"
 
 type Props = {
     id:number
     title: string
     descriptions: string
-    price1: number
-    price2: number
-    price3: number
-    currency1:string
-    currency2:string
-    currency3:string
+    price: number
+
+    currency:string
+
 
     totalPrice:(count:number,price:number) => void
 }
@@ -21,13 +20,11 @@ const ProdactListItem = (
         id,
         title,
         descriptions,
-        price1,
-        price2,
-        price3,
+        price,
+
         totalPrice,
-        currency1,
-        currency2,
-        currency3
+        currency,
+
     }: Props) => 
         {
 
@@ -49,12 +46,13 @@ return (
     justifyContent="center"
     alignItems="center"
     margin="10px">
-        <CardContent>
+        <CardContent className="card1">
             <h1 >{title}</h1>
             <h3 >{descriptions}</h3>
-            <h5 >{currency3}</h5>
-            <h3 >{price3}</h3>
+            <h5 >{currency}</h5>
+            <h3 >{price}</h3>
         </CardContent>
+
         </Stack>
         <CardActions>
         <Stack paddingLeft="30%" >

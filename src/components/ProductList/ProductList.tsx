@@ -25,19 +25,17 @@ const ProductList = ({ totalPrice }: Props) => {
             </Stack>
             <Grid container spacing={3}>
                 {productsArray1.map(
-                    ({ id, title, descriptions, price1,price2,price3, currency1,currency2,currency3 }) => (
+                    ({ id, title, descriptions, price, currency }) => (
                         <Grid item xs={12} sm={6} md={4}>
                             <ProductListItem
                                 id={id}
                                 totalPrice={totalPrice}
                                 title={title}
                                 descriptions={descriptions}
-                                currency1={currency1}
-                                currency2={currency2}
-                                currency3={currency3}
-                                price1={price1}
-                                price2={price2}
-                                price3={price3}
+                                currency={currency}
+
+                                price={price}
+
                             />
                         </Grid>
                     )
