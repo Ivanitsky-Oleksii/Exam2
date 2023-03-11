@@ -21,7 +21,7 @@ const App = (props: Props) => {
     const [currencyType, setCurrencyType] = useState<string>('USD')
     const сhangeCurrencyToUSD = () => {
         setCurrencyType(() => 'USD')
-        setExchangeRate(1)
+        setExchangeRate(0.94)
     }
     const сhangeCurrencyToUAH = () => {
         setCurrencyType(() => 'UAH')
@@ -29,7 +29,7 @@ const App = (props: Props) => {
     }
     const сhangeCurrencyToEUR = () => {
         setCurrencyType(() => 'EUR')
-        setExchangeRate(0.94)
+        setExchangeRate(1)
     }
 
 

@@ -18,11 +18,13 @@ const ProdactListItem = (
         descriptions,
         price,
         totalPrice,
-        currencyType
+        currencyType,
+        exchangeRate
 
 
     }: Props) => 
         {
+    const changePrice = price * exchangeRate
 return (
     <>
     <Stack
@@ -41,7 +43,7 @@ return (
         <CardContent >
             <h1 >{title}</h1>
             <h3 >{descriptions}</h3>
-            <h5 >{price}</h5>
+            <h5 >{changePrice}</h5>
             <h3 >{currencyType}</h3>
         </CardContent>
 
