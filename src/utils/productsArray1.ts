@@ -3,7 +3,7 @@ export type Product = {
     title: string
     descriptions: string
     price: number
-    currency:string
+
 
     
 
@@ -14,7 +14,7 @@ const productsArray: Product[] = [
         title: 'iPhone 12',
         descriptions: 'This is iPhone 12....',
         price: 750,
-        currency:"EUR",
+
 
         
         
@@ -23,8 +23,8 @@ const productsArray: Product[] = [
         id:2,
         title: 'iPhone 8',
         descriptions: 'This is iPhone 8....',
-        price: 840,
-        currency:"USD",
+        price: 850,
+
 
         
 
@@ -34,7 +34,7 @@ const productsArray: Product[] = [
         title: 'iPhone X',
         descriptions: 'This is iPhone X....',
         price: 1250,
-        currency:"UAH",
+
         
 
     },

@@ -1,12 +1,21 @@
 import { Grid, Typography, Button, Stack } from '@mui/material'
 import ProductListItem from 'components/ProductList/ProductListItem'
 import productsArray1 from 'utils/productsArray1'
+import CurrencyButton from "../Currency/CurrencyButton"
 
 
+type Props = {
+    totalPrice:(price:number) => any
+    exchangeRate:number
+    currencyType:string
+    сhangeCurrencyToUSD:()=>void
+    сhangeCurrencyToUAH:()=>void
+    сhangeCurrencyToEUR:()=>void
 
-type Props = {totalPrice: (count: number, price: number) => void}
 
-const ProductList = ({ totalPrice }: Props) => {
+}
+
+const ProductList = ({ exchangeRate,currencyType,сhangeCurrencyToUSD,сhangeCurrencyToUAH,сhangeCurrencyToEUR,totalPrice }: Props) => {
     return (
         <>
             <Typography variant="h2" align="center" component="h4">
@@ -19,21 +28,23 @@ const ProductList = ({ totalPrice }: Props) => {
     spacing={1}
     margin="10px"
 >
-            <Button variant='outlined'>EUR</Button>
-            <Button variant='outlined'>USD</Button>
-            <Button variant='outlined'>UAH</Button>
+<CurrencyButton
+                    changeCurrencyToUAH={сhangeCurrencyToUAH}
+                    changeCurrencyToUSD={сhangeCurrencyToUSD}
+                    changeCurrencyToEUR={сhangeCurrencyToEUR}
+                />
             </Stack>
             <Grid container spacing={3}>
                 {productsArray1.map(
-                    ({ id, title, descriptions, price, currency }) => (
+                    ({ id, title, descriptions, price}) => (
                         <Grid item xs={12} sm={6} md={4}>
                             <ProductListItem
+                            totalPrice={totalPrice}
                                 id={id}
-                                totalPrice={totalPrice}
                                 title={title}
                                 descriptions={descriptions}
-                                currency={currency}
-
+                                exchangeRate={exchangeRate}
+                                currencyType={currencyType}
                                 price={price}
 
                             />

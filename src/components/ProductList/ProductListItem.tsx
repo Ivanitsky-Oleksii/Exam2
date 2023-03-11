@@ -7,11 +7,9 @@ type Props = {
     title: string
     descriptions: string
     price: number
-
-    currency:string
-
-
-    totalPrice:(count:number,price:number) => void
+    totalPrice:(price:number) => any
+    exchangeRate: number
+    currencyType: string
 }
 
 
@@ -21,9 +19,10 @@ const ProdactListItem = (
         title,
         descriptions,
         price,
-
         totalPrice,
-        currency,
+        exchangeRate,
+        currencyType
+
 
     }: Props) => 
         {
@@ -46,17 +45,17 @@ return (
     justifyContent="center"
     alignItems="center"
     margin="10px">
-        <CardContent className="card1">
+        <CardContent >
             <h1 >{title}</h1>
             <h3 >{descriptions}</h3>
-            <h5 >{currency}</h5>
-            <h3 >{price}</h3>
+            <h5 >{price}</h5>
+            <h3 >{currencyType}</h3>
         </CardContent>
 
         </Stack>
         <CardActions>
         <Stack paddingLeft="30%" >
-        <Button variant="outlined" onClick={() => totalPrice(id,count)}>BUY</Button>
+        <Button variant="outlined" onClick={() => totalPrice(price)}>BUY</Button>
         </Stack>
         </CardActions>
     </Card>

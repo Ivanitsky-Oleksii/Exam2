@@ -1,17 +1,23 @@
-import Cart from "components/Cart/Cart"
+import CartTotal from "components/Cart/CartTotal"
 import ProductList from "components/ProductList/ProductList"
 
 
 type Props = {
-    totalPrice:(count:number,price:number) => void
-    productsInCart:{[id:number]:number}
+    totalPrice:(price:number) => any
+    exchangeRate:number
+    currencyType:string
+    сhangeCurrencyToUSD:()=>void
+    сhangeCurrencyToUAH:()=>void
+    сhangeCurrencyToEUR:()=>void
+    total: number
 }
 
-const Home = ({totalPrice,productsInCart}: Props) => {
+const Home = ({сhangeCurrencyToUSD,сhangeCurrencyToUAH,сhangeCurrencyToEUR,exchangeRate,currencyType,total,totalPrice}: Props) => {
 return (
     <>
-<ProductList totalPrice={totalPrice} />
-<Cart productsInCart={productsInCart}/>
+<ProductList  exchangeRate={exchangeRate} totalPrice={totalPrice}
+currencyType={currencyType} сhangeCurrencyToUSD={сhangeCurrencyToUSD} сhangeCurrencyToUAH={сhangeCurrencyToUAH} сhangeCurrencyToEUR={сhangeCurrencyToEUR}/>
+<CartTotal exchangeRate={exchangeRate} currencyType={currencyType} total={total}/>
 
     </>
 
