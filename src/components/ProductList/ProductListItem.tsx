@@ -43,7 +43,7 @@ return (
         <CardContent >
             <h1 >{title}</h1>
             <h3 >{descriptions}</h3>
-            <h5 >{changePrice}</h5>
+            <h3 >{changePrice}</h3>
             <h3 >{currencyType}</h3>
         </CardContent>
 
